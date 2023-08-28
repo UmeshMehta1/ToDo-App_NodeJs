@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/styles.css">
+  <title>Edit Task</title>
+</head>
+<style>
+  /* public/styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  background-color: #dc3545;
+}
+
+button[type="submit"]:hover {
+  background-color: #c82333;
+}
+
+
+.container{
+  width: 80%;
+  border-radius: 10px;
+  
+  
+}
+
+body{
+  background-color: #333;
+}
+
+
+</style>
+<body>
+  <div class="container">
+  <h1>Edit Task</h1>
+  <form action="/edit/<%= taskId %>" method="post">
+    <input type="text" name="task" value="<%= task %>" required>
+    <button type="submit">Update Task</button>
+  </form>
+</div>
+</body>
+</html>
